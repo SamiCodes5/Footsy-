@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Footsy — find your next favourite pair of shoes.">
+  <title>Footsy | Find Your Fit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">STEP INTO SOMETHING NEW · FREE SHIPPING ON ORDERS OVER ₹1,999</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Footsy home">footsy<span>.</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#shop">Shop all</a>
+      <a href="#shop" data-filter-link="Sneakers">Sneakers</a>
+      <a href="#shop" data-filter-link="Casual">Casual</a>
+      <a href="#shop" data-filter-link="Formal">Formal</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-toggle" aria-label="Show search">⌕</button>
+      <button class="cart-button" id="cart-toggle" aria-label="Open shopping cart">Bag <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY EDIT · 2026</p>
+        <h1>Good shoes.<br><em>Great moves.</em></h1>
+        <p class="hero-text">From slow Sundays to big plans, find the pair that feels like you.</p>
+        <a class="primary-button" href="#shop">Find your fit <span>↗</span></a>
+        <div class="hero-note"><span class="tiny-star">✳</span> Made for your every day</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Stylish footwear editorial illustration">
+        <div class="art-circle"></div>
+        <div class="art-label">WALK<br>YOUR WAY</div>
+        <div class="shoe-shape shoe-one"><span></span></div>
+        <div class="shoe-shape shoe-two"><span></span></div>
+        <div class="art-sticker">NEW<br>SEASON</div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Shopping benefits">
+      <div>✳ Thoughtful picks</div><div>↗ Easy returns</div><div>♡ Comfort first</div><div>✦ Secure checkout demo</div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE FOOTSY COLLECTION</p><h2>Find your <em>solemate.</em></h2></div>
+        <p class="section-intro">Your next favourite pair is just a scroll away.</p>
+      </div>
+      <div class="shop-tools">
+        <label class="search-wrap" id="search-wrap"><span>⌕</span><input id="search-input" type="search" placeholder="Search footwear..." aria-label="Search footwear"></label>
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="filter-chip active" data-filter="All">All pairs</button>
+          <button class="filter-chip" data-filter="Sneakers">Sneakers</button>
+          <button class="filter-chip" data-filter="Casual">Casual</button>
+          <button class="filter-chip" data-filter="Formal">Formal</button>
+          <button class="filter-chip" data-filter="Sandals">Sandals</button>
+        </div>
+        <label class="sort-wrap">Sort by
+          <select id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No pairs found. Try another search.</p>
+    </section>
+
+    <section class="promo">
+      <div><p class="eyebrow">A LITTLE COMFORT GOES A LONG WAY</p><h2>Your day. Your pace.<br><em>Your Footsy.</em></h2></div>
+      <a href="#shop" class="light-button">Explore the collection ↗</a>
+      <span class="promo-spark">✳</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#">footsy<span>.</span></a>
+    <p>Find your fit. Walk your way.</p>
+    <p class="copyright">© 2026 Footsy · Student e-commerce project</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR PICKS</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button id="cart-close" class="close-button" aria-label="Close cart">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer"><div class="total-row"><span>Subtotal</span><strong id="cart-total">₹0</strong></div><p class="demo-note">Demo checkout only. No payment will be taken.</p><button id="checkout-button" class="primary-button checkout-button">Continue to checkout ↗</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
